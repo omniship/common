@@ -1,0 +1,51 @@
+{
+    "name": "omniship/common",
+    "description": "Core components for Omniship, the multi-carrier shipping library for PHP.",
+    "keywords": [
+        "php", "werxe"
+    ],
+    "homepage": "https://werxe.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Werxe",
+            "email": "hello@werxe.com",
+            "homepage": "https://werxe.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "php-http/client-implementation": "^1.0",
+        "php-http/message": "^1.5",
+        "php-http/discovery": "^1.2.1"
+    },
+    "require-dev": {
+        "omniship/tests": "^1.0",
+        "friendsofphp/php-cs-fixer": "^2.0"
+    },
+    "autoload": {
+        "psr-4": { "Omniship\\Common\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Omniship\\Common\\Tests\\": "tests/" }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "suggest": {
+        "php-http/guzzle6-adapter": "Use the Guzzle 6 adapter to send your requests. (^1.1)"
+    },
+    "extra": {
+        "component": "package",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "scripts": {
+        "cs": "php-cs-fixer fix src --rules=@PSR2 --verbose --diff --using-cache=no",
+        "test": "vendor/bin/phpunit --verbose"
+    },
+    "minimum-stability": "stable"
+}
